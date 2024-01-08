@@ -1,0 +1,181 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+:root {
+	--s1cor1: #262310;
+	--s1cor2: #F2C641;
+	--s1cor3: #D9CBA3;
+	--s1cor4: #8C5B3E;
+	--s1cor6: #624230;
+	--s1cor5: #A60A0A;
+	
+	--s2cor1: #BFBFBF;
+	--s2cor2: #737373;
+	--s2cor3: #404040;
+	
+	--s3cor1: #2B3240;
+	--s3cor2: #586973;
+	--s3cor3: #BF9D95;
+}
+
+header {
+	padding: 10px 5px;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	background-color: transparent;
+	background-image: linear-gradient(to left, var(--s1cor4), var(--s1cor6));
+	box-shadow: 0px 3px 8px #0000007e;
+}
+header h1 {
+	display: inline-block;
+	color: white;
+	background-color: #0000009b;
+	padding: 1px;
+	border-radius: 5px;
+}
+header nav {
+	float: right;
+	transform: translate(0px, 50%);
+}
+header nav > a {
+	margin-right: 5px;
+	color: white;
+}
+
+div#fundolayer1, div#fundolayer2, div#fundolayer3 {
+	position: relative;
+}
+div#fundolayer1 {
+	background-image: linear-gradient(to left, var(--s1cor4), var(--s1cor6));
+}
+div#fundolayer2 {
+	background-image: linear-gradient(to left, var(--s2cor1), var(--s2cor2));
+}
+div#fundolayer3 {
+	background-image: linear-gradient(to left, var(--s3cor2), var(--s3cor1));
+}
+
+section {
+	padding-bottom: 80vw;
+	background-position: left bottom;
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: relative;
+	z-index: 10;
+}
+section > p:nth-of-type(1) {
+	position: absolute;
+	right: 5vw;
+	top: 53%;
+	transform: translate(0%, -50%);
+	font-size: 2vw;
+	width: 35vw;
+	font-weight: bold;
+	text-shadow: 0px 0px 10px #00000066;
+}
+section > p:nth-of-type(2) {
+	position: absolute;
+	width: 40vw;
+	bottom: 5vw;
+	right: 5vw;
+	text-align: right;
+	font-size: 3vw;
+	font-weight: bold;
+}
+section > h2 {
+	position: absolute;
+	bottom: 5vw;
+	left: 5vw;
+	font-size: 9vw;
+	color: white;
+	width: 5vw;
+	text-shadow: 0px 0px 10px #00000066;
+}
+section div.melhoresmusicas {
+	position: absolute;
+	width: 35vw;
+	background-color: #000000aa;
+	padding: 5px;
+	color: white;
+	border-radius: 10px;
+	font-size: 2vw;
+	right: 5vw;
+	bottom: 56%;
+	transform: translate(0%, -50%);
+}
+div.melhoresmusicas a {
+	color: white;
+}
+
+div.imagens {
+	position: absolute;
+	top: 10vw;
+	left: 43vw;
+	transform: translate(-50%, 0px);
+	width: 21vw;
+}
+div.imagens img {
+	position: absolute;
+	width: 100%;
+	border-radius: 5px;
+	box-shadow: 0px 5px 8px #000000;
+}
+div.imagens img:nth-of-type(1) {
+	z-index: 2;
+}
+div.imagens img:nth-of-type(2) {
+	top: 10vw;
+	z-index: 1;
+}
+div.imagens img:nth-of-type(3) {
+	top: 18vw;
+	z-index: 0;
+}
+section#Teto {
+	background-image: url('imagensartistas/teto.png');
+	color: var(--s1cor3);
+}
+section#Teto div.melhoresmusicas h2 {
+	color: var(--s1cor5);
+}
+section#Teto div.melhoresmusicas a {
+	color: var(--s1cor2);
+}
+
+
+section#Veigh {
+	color: white;
+	background-image: url('imagensartistas/veigh.png');
+}
+
+
+section#Cabelinho {
+	background-image: url('imagensartistas/cabelinho.png');
+	color: var(--s3cor3);
+}
+section#Cabelinho div.melhoresmusicas h2 {
+	color: var(--s3cor2);
+}
+
+
+@media screen and (max-width: 720px) {
+		section {
+			padding-bottom: 100vw;
+		}
+		section > p:nth-of-type(1) {
+			top: 58%;
+			right: 6vw;
+			font-size: 3vw;
+		}
+		
+		
+		div.imagens {
+			position: absolute;
+			top: 5vw;
+			left: 5vw;
+			transform: translate(0%, 0px);
+			width: 21vw;
+		}
+}
