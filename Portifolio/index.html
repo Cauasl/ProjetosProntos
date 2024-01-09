@@ -11,10 +11,29 @@
 			box-shadow: 3px 3px 8px #000000b9;
 			margin: 20px 0px;
 		}
-		section > iframe {
+		section > input {
+			display: block;
+			margin: auto;
+			background-color: transparent;
+			border: 0px solid transparent;
+			text-decoration: underline;
+		}
+		section > div {
+			border-radius: 5px;
+			border: 3px solid #3f3f3f;
 			display: block;
 			width: 465px;
-			margin: auto;
+			height: 220px;
+			margin: 0px auto 5px auto;
+		}
+		section > div > iframe {
+			display: none;
+			border-radius: 5px;
+			width: 100%;
+			height: 100%;
+		}
+		section > div > img {
+			width: 100%;
 			border-radius: 5px;
 		}
 	</style>
@@ -24,14 +43,21 @@
 		<h1>Páginas feitas por mim</h1>
 		<p>Projetos fictícios criados por mim para praticar meus conhecimentos.</p>
 		<section>
-			<iframe src="https://cauasl.github.io/Projetos_criados_por_mim/TecnologiaIANaMedicina/" frameborder="0" sandbox="sandbox"></iframe>
+			<div>
+				<iframe src="https://cauasl.github.io/Projetos_criados_por_mim/TecnologiaIANaMedicina/" frameborder="0" sandbox="sandbox"></iframe>
+				<img src="imagensprevizualizada/mariokart.jpg" alt="Mario kart">
+			</div>
+			<input type="button" id="bt1" value="Ver pré visualização &gt;">
 			<h1>Um projeto</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			<p><a href="https://cauasl.github.io/Projetos_criados_por_mim/TecnologiaIANaMedicina/" target="_blank">Ver o projeto</a></p>
 		</section>
 		
 		<section>
-			<iframe src="https://cauasl.github.io/Projetos_criados_por_mim/Jogos/" frameborder="0" sandbox="sandbox"></iframe>
+			<div>
+				<iframe src="https://cauasl.github.io/Projetos_criados_por_mim/Jogos/" frameborder="0" sandbox="sandbox"></iframe>
+			</div>
+			<input type="button" id="bt1" value="Ver pré visualização &gt;">
 			<h1>Dois projetos</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			<p><a href="https://cauasl.github.io/Projetos_criados_por_mim/Jogos/" target="_blank">Ver o projeto</a></p>
