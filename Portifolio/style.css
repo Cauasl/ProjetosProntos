@@ -1,3 +1,7 @@
+body {
+	font: normal 1em Arial, sans-serif;
+}
+
 section {
 	padding: 5px;
 	border-radius: 5px;
