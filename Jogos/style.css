@@ -121,6 +121,7 @@ section#map input {
 	color: white;
 	padding: 3vw 5px;
 	box-shadow: 0px 0px 8px #00000092;
+	box-sizing: border-box;
 }
 section#map input:active {
 	border: 3px solid var(--cor1);
