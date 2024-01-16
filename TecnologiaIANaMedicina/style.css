@@ -45,7 +45,7 @@ header nav > a {
 	font-weight: bold;
 	color: var(--cor0);
 	text-decoration: none;
-	border-bottom: 2px solid var(--cor0);
+	border-bottom: 2px solid transparent;
 }
 header nav > a:hover {
 	border-bottom: 2px solid var(--cor1);

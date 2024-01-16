@@ -53,11 +53,21 @@ section > div > img {
 	border-radius: 5px;
 	transition: transform 1s ease;
 }
+section a {
+	color: #f09c00;
+	text-decoration: none;
+	border-bottom: 2px solid transparent;
+	transition: .5s;
+}
+section a:hover {
+	border-bottom: 2px solid #f09c00;
+	transition: .5s;
+}
 section h1::before {
 	content: 'Projeto ';
 }
 section > h1 > a::after {
-	content: ' [link externo]';
+	content: '	[Ver site]';
 	font-size: .5em;
 }
 
