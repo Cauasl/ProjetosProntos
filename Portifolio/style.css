@@ -10,6 +10,7 @@ body {
 }
 
 section {
+	max-width: 900px;
 	padding: 5px;
 	border-radius: 5px;
 	box-shadow: 3px 3px 8px #000000b9;
@@ -50,7 +51,7 @@ section h1::before {
 
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 850px) {
 	section > div {
 		float: none;
 		margin: 0px auto 5px auto;
