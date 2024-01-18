@@ -28,3 +28,7 @@ for(var i=0; i < quantINPUT.length; i++) {
 //Sistema da mostra de contato.
 let bt_contato = document.querySelector("input#contato");
 let span_formasdecontato = document.querySelector("span#formasdecontato");
+
+bt_contato.addEventListener('click', function() {
+	span_formasdecontato.setAttribute('class', 'oncontato');
+});

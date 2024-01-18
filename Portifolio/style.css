@@ -35,20 +35,9 @@ nav {
 	background-color: var(--cor4);
 	color: var(--cor6);
 	padding: 10px;
-	position: relative;
 	height: 25px;
 }
-nav > span#formasdecontato {
-	background-color: var(--cor1);
-	color: var(--cor6);
-	border-radius: 5px;
-	padding: 3px;
-	font-weight: bold;
-	font-size: .8em;
-	display: none;
-	margin: 0px 5px;
-	transition: display 10s;
-}
+
 
 nav > input {
 	border: 0px solid transparent;
@@ -57,7 +46,6 @@ nav > input {
 	color: var(--cor6);
 	padding: 3px;
 	border-radius: 5px;
-	transition: background-color 1s, color 1s;
 }
 
 
