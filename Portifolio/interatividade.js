@@ -1,3 +1,4 @@
+//Sistema das trocas de imagens para iframe e visse e versa.
 let quantINPUT = document.getElementsByName('bt');
 let iframe = document.getElementsByTagName('iframe');
 let img = document.getElementsByTagName('img');
@@ -22,3 +23,8 @@ for(var i=0; i < quantINPUT.length; i++) {
 });
 	}(i));
 }
+
+
+//Sistema da mostra de contato.
+let bt_contato = document.querySelector("input#contato");
+let span_formasdecontato = document.querySelector("span#formasdecontato");
