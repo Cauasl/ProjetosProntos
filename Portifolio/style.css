@@ -20,7 +20,7 @@ h1, h2, p {
 body {
 	font: normal 1em Arial, sans-serif;
 	background-color: #2b2b2b;
-	background-image: linear-gradient(to bottom, var(--cor3) 6%, transparent);
+	background-image: linear-gradient(to bottom, var(--cor3) 3%, transparent);
 	color: white;
 }
 
@@ -32,11 +32,9 @@ header {
 
 
 nav {
-	background-color: var(--cor4);
-	color: var(--cor6);
 	padding: 10px;
+	max-width: 470px;
 }
-
 /*Transição para mostrar contato*/
 nav > div#divContato {
 	padding: 5px;
@@ -49,7 +47,7 @@ nav > div#divContato {
 	overflow: hidden;
 }
 nav > div#divContato.EfeitoContato {
-	width: 470px;
+	width: 98%;
 	height: 100px;
 	transition: 1.5s;
 }
@@ -68,7 +66,22 @@ nav > div#divContato > span:hover {
 }
 
 /*Links*/
-nav > div#divContato a {
+nav > div#divContato > p {
+	font-weight: bold;
+}
+nav > div#divContato > p#linkedin {
+	color: var(--cor6);
+}
+nav > div#divContato > p#email {
+	color: #de0000;
+}
+nav > div#divContato > p#github {
+	color: var(--cor0);
+}
+nav > div#divContato > p > span#iEmail {
+	font-weight: normal;
+}
+nav > div#divContato > p > a {
 	color: var(--cor4);
 }
 
@@ -105,6 +118,7 @@ section > div {
 	float: left;
 	border-radius: 5px;
 	border: 3px solid #3f3f3f;
+	background-color: var(--cor3);
 	display: block;
 	width: 98%;
 	max-width: 465px;
@@ -125,7 +139,7 @@ section > div > img {
 }
 
 section a {
-	color: ;
+	color: var(--cor2);
 	text-decoration: none;
 	border-bottom: 2px solid transparent;
 	transition: .5s;
