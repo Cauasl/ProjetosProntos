@@ -26,9 +26,16 @@ for(var i=0; i < quantINPUT.length; i++) {
 
 
 //Sistema da mostra de contato.
-let bt_contato = document.querySelector("input#contato");
-let span_formasdecontato = document.querySelector("span#formasdecontato");
-
-bt_contato.addEventListener('click', function() {
-	span_formasdecontato.setAttribute('class', 'oncontato');
-});
+function MostrarContato() {
+	let divContato = document.getElementById('divContato');
+	//divContato.classList.toggle('EfeitoContato');
+	let btContato = document.querySelector("span#btContato");
+	
+	if(divContato.className == 'EfeitoContato') {
+		divContato.removeAttribute('class');
+		btContato.innerText = 'Contato >';
+	}else {
+		divContato.setAttribute('class', 'EfeitoContato');
+		btContato.innerText = 'Contato <';
+	}
+}
