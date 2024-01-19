@@ -44,12 +44,12 @@ nav > div#divContato {
 	display: inline-block;
 	background-color: var(--cor1);
 	width: 78px;
-	height: 16px;
+	height: 17px;
 	transition: 1.5s;
 	overflow: hidden;
 }
 nav > div#divContato.EfeitoContato {
-	width: 98%;
+	width: 470px;
 	height: 100px;
 	transition: 1.5s;
 }
@@ -59,24 +59,18 @@ nav > div#divContato > span {
 	font-weight: bold;
 	color: var(--cor6);
 	transition: color 1s;
+	display: block;
+	padding-bottom: 3px;
 }
 nav > div#divContato > span:hover {
 	color: var(--cor2);
 	transition: color 1s;
 }
 
-/*Links
-nav > div#divContato > a {
-	display: none;
-	font-size: 0em;
-	transition: font-size 5s;
+/*Links*/
+nav > div#divContato a {
+	color: var(--cor4);
 }
-nav > div#divContato.EfeitoContato > a {
-	display: inline;
-	font-size: 1em;
-	transition: font-size 5s;
-}
-*/
 
 
 main {
