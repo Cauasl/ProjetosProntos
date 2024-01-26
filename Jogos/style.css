@@ -61,6 +61,13 @@ nav {
 	z-index: 100;
 	background-color: var(--fundo1);
 }
+nav menu {
+	padding: 0px;
+	margin: 0px;
+}
+nav span#links {
+	display: none;
+}
 nav a {
 	margin: 0px 10px;
 	font-weight: bold;
@@ -73,7 +80,7 @@ nav a:hover {
 	border-bottom: 2px solid var(--cor4);
 	transition: 1s;
 }
-nav span {
+nav span#namelogo {
 	float: left;
 	color: var(--cor4);
 	font: normal bold 1em Arial, sans-serif;
@@ -86,7 +93,7 @@ main {
 	margin: auto;
 	border-radius: 5px;
 	background-color: var(--fundo2);
-	padding: 15px;
+	padding: 10px;
 	border: 1px solid var(--cor4);
 }
 main section#personagens {
@@ -190,4 +197,20 @@ footer p {
 }
 footer a {
 	color: var(--cor0);
+}
+
+@media screen and (max-width: 700px) {
+	nav span#namelogo {
+		/* float: none; */
+		text-align: left;
+	}
+
+	nav span#links {
+		display: block;
+	}
+
+	nav a {
+		display: block;
+		text-align: center;
+	}
 }
