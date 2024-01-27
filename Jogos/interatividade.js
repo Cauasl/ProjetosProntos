@@ -57,10 +57,10 @@ function ladoD() {
 };
 
 function MostrarLinks() {
-	let links = document.getElementById('links');
-	 if(links.className == 'mostra'){
-		links.removeAttribute('class', 'mostra');
+	let links = document.getElementById('menu');
+	 if(links.style.display == 'block'){
+		links.style.display = 'none';
 	 }else {
-		links.setAttribute('class', 'mostra');
+		links.style.display = 'block';
 	 }
 }

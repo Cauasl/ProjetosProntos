@@ -1,33 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogos.com</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Jogos.com</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <style>
-    	table {
-				max-width: 80%;
-				min-width: 30%;
-				border-collapse: collapse;
-				margin: auto;
-			}
-			table caption {
-				color: var(--cor0);
-			}
-			table td, table th {
-				border: 1px solid black;
-				padding: 5px;
-				vertical-align: bottom;
-			}
-			table th {
-				background-color: var(--cor4);
-				width: 100px;
-				text-align: center;
-				color: white;
-			}
-    </style>
+	<link rel="stylesheet" href="style.css">
+	<style>
+	table {
+			max-width: 80%;
+			min-width: 30%;
+			border-collapse: collapse;
+			margin: auto;
+		}
+		table caption {
+			color: var(--cor0);
+		}
+		table td, table th {
+			border: 1px solid black;
+			padding: 5px;
+			vertical-align: bottom;
+		}
+		table th {
+			background-color: var(--cor4);
+			width: 100px;
+			text-align: center;
+			color: white;
+		}
+	</style>
 </head>
 <body>
 	<header>
@@ -38,8 +39,8 @@
 	</header>
 	<nav>
 		<span id="namelogo">Jogos.com</span>
-		<span id="links" onclick="MostrarLinks()">Mostrar links</span>
-		<menu>
+		<i id="links" class="material-icons" onclick="MostrarLinks()">menu</i>
+		<menu id="menu">
 			<ul>
 				<li><a href="https://cauasl.github.io/Projetos_criados_por_mim/Portifolio/" target="_blank">Home</a></li>
 				<li><a href="#">Outros Jogos</a></li>

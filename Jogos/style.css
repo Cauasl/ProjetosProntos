@@ -66,37 +66,22 @@ nav > span#namelogo {
 	font-weight: bold;
 	color: var(--cor4);
 }
-nav > span#links {
+nav > i#links {
 	display: none;
 	text-align: right;
 	color: var(--cor1);
-	font-weight: bold;
 	transition: color .2s;
 	cursor: pointer;
 }
-nav > span#links:hover {
-	color: var(--cor4);
-	transition: color .2s;
-}
-nav > span#links::after {
-	content: '>';
-	margin-left: 0px;
-	opacity: 0%;
-	transition: .4s;
-}
-nav > span#links:hover::after {
-	margin-left: 5px;
-	opacity: 100%;
-	transition: .4s;
-}
-nav > menu, menu > ul {
+nav > menu {
 	padding: 0px;
 	margin: 0px 0px;
 	display: block;
 	text-align: right;
 }
-nav:has(span#links.mostra) > menu, nav:has(span#links.mostra) > menu > ul {
-	display: block;
+menu > ul {
+	padding: 0px;
+	margin: 0px;
 }
 nav li {
 	display: inline;
@@ -233,10 +218,10 @@ footer a {
 		text-align: left;
 	}
 
-	nav span#links {
+	nav i#links {
 		display: block;
 	}
-	nav > menu, menu > ul {
+	nav > menu {
 		text-align: center;
 		display: none;
 		margin: 16px 0px;
