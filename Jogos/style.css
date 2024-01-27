@@ -51,22 +51,55 @@ section#titulo p {
 }
 
 nav {
-	text-align: center;
+	color: white;
 	padding: 10px;
 	box-shadow: 3px 3px 8px #00000096;
+	margin: 10px 0px;
 	border-radius: 10px;
-	margin: 10px -10px;
 	position: sticky;
 	top: 0;
 	z-index: 100;
 	background-color: var(--fundo1);
 }
-nav menu {
-	padding: 0px;
-	margin: 0px;
+nav > span#namelogo {
+	float: left;
+	font-weight: bold;
+	color: var(--cor4);
 }
-nav span#links {
+nav > span#links {
 	display: none;
+	text-align: right;
+	color: var(--cor1);
+	font-weight: bold;
+	transition: color .2s;
+}
+nav > span#links:hover {
+	color: var(--cor4);
+	transition: color .2s;
+}
+nav > span#links::after {
+	content: '>';
+	margin-left: 0px;
+	opacity: 0%;
+	transition: .4s;
+}
+nav > span#links:hover::after {
+	margin-left: 5px;
+	opacity: 100%;
+	transition: .4s;
+}
+nav > menu, menu > ul {
+	padding: 0px;
+	margin: 0px 0px;
+	display: block;
+	text-align: right;
+}
+nav:has(span#links.mostra) > menu, nav:has(span#links.mostra) > menu > ul {
+	display: block;
+}
+nav li {
+	display: inline;
+	list-style: none;
 }
 nav a {
 	margin: 0px 10px;
@@ -80,15 +113,10 @@ nav a:hover {
 	border-bottom: 2px solid var(--cor4);
 	transition: 1s;
 }
-nav span#namelogo {
-	float: left;
-	color: var(--cor4);
-	font: normal bold 1em Arial, sans-serif;
-}
 
 main {
 	text-align: justify;
-	min-width: 380px;
+	min-width: 370px;
 	max-width: 800px;
 	margin: auto;
 	border-radius: 5px;
@@ -201,16 +229,18 @@ footer a {
 
 @media screen and (max-width: 700px) {
 	nav span#namelogo {
-		/* float: none; */
 		text-align: left;
 	}
 
 	nav span#links {
 		display: block;
 	}
-
-	nav a {
-		display: block;
+	nav > menu, menu > ul {
 		text-align: center;
+		display: none;
+		margin: 16px 0px;
+	}
+	nav li {
+		display: block;
 	}
 }

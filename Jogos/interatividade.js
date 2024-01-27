@@ -55,3 +55,12 @@ function ladoD() {
 	}
 	imgmap.setAttribute("src", `imagensmkart/Mapas/map${mapselect}.jpg`);
 };
+
+function MostrarLinks() {
+	let links = document.getElementById('links');
+	 if(links.className == 'mostra'){
+		links.removeAttribute('class', 'mostra');
+	 }else {
+		links.setAttribute('class', 'mostra');
+	 }
+}
