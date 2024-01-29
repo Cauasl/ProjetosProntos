@@ -29,7 +29,10 @@ header {
 	background-color: var(--cor3);
 	padding: 10px;
 }
-
+header > img {
+	width: 120px;
+	border-radius: 10px;
+}
 
 nav {
 	padding: 10px;

@@ -39,3 +39,12 @@ function MostrarContato() {
 		btContato.innerText = 'Contato <';
 	}
 }
+
+fetch('https://api.github.com/users/Cauasl').then(function(resdados) {
+	return resdados.json();
+}).then(function(resdados2) {
+	console.log(resdados2);
+	document.getElementById('meunome').innerText = resdados2.name;
+	document.getElementById('minhaimg').src = resdados2.avatar_url;
+	document.getElementById('minhaimg').alt = resdados2.login;
+});
