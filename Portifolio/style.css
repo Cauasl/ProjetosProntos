@@ -56,14 +56,15 @@ nav > div#divContato.EfeitoContato {
 }
 
 /*Botão para mostrar contato*/
-nav > div#divContato > span {
+nav > div#divContato > span#btContato {
 	font-weight: bold;
 	color: var(--cor6);
 	transition: color 1s;
 	display: block;
 	padding-bottom: 3px;
+	cursor: pointer;
 }
-nav > div#divContato > span:hover {
+nav > div#divContato > span#btContato:hover {
 	color: var(--cor2);
 	transition: color 1s;
 }
@@ -103,6 +104,7 @@ section {
 	box-shadow: 3px 3px 8px #000000b9;
 	margin: 20px auto;
 	min-height: 238px;
+	position: relative;
 }
 section > input {
 	display: block;
@@ -117,28 +119,17 @@ section > input:hover {
 	text-decoration: underline;
 }
 
-section > div {
+section > img {
+	width: 100%;
+	border-radius: 5px;
+	transition: transform 1s ease;
 	float: left;
-	border-radius: 5px;
-	border: 3px solid #3f3f3f;
-	background-color: var(--cor3);
+	max-width: 400px;
 	display: block;
-	width: 98%;
-	max-width: 465px;
-	height: 220px;
-	margin: 5px;
-}
-section > div > iframe {
-	display: none;
-	border-radius: 5px;
-	width: 100%;
-	height: 100%;
-	transition: transform 1s ease;
-}
-section > div > img {
-	width: 100%;
-	border-radius: 5px;
-	transition: transform 1s ease;
+	margin-right: 5px;
+	position: relative;
+	transform: translateY(10%);
+	border: 3px solid var(--cor3);
 }
 
 section a {
@@ -161,9 +152,10 @@ section > h1 > a::after {
 
 
 
-@media screen and (max-width: 850px) {
-	section > div {
+@media screen and (max-width: 769px) {
+	section > img {
 		float: none;
 		margin: 0px auto 5px auto;
+		transform: translateY(0%);
 	}
 }
