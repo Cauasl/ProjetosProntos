@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Solicitar Serviço</title>
+   <link rel="stylesheet" href="estilos/telaindex/pg-inicial.css">
+   <link rel="stylesheet" href="estilos/formulario/conserto.css">
+   <link rel="stylesheet" href="estilos/all.css">
+</head>
+<body>
+   <header>
+      <h1><a href="index.html">AT Cel</a></h1>
+       <nav>
+         <a href="index.html">Voltar</a>
+       </nav>
+   </header>
+   <main>
+      <h2>Conserto</h2>
+      <form action="" method="post">
+         <p> <!-- ippa: possivel problema com o aparelho -->
+            <label for="ippa">Problema do aparelho</label> <br>
+            <input type="text" class="inpt_text" name="info" id="ippa" list="lista-de-problemas">
+            <datalist id="lista-de-problemas">
+               <option>Tela Quebrada</option>
+               <option>Aparelho não liga</option>
+               <option>Não está carregando</option>
+               <option>Super Aquecendo</option>
+            </datalist>
+         </p>
+         <p> <!-- Enviar uma imagem -->
+            <input type="file" name="info" id="eui" accept="image/jpeg, image/jpg">
+         </p>
+         <p> <!-- mip: Mais informações do problema -->
+            <label for="mip">Mais informações do problema</label> <br>
+            <textarea name="info" id="mip" cols="30" rows="10"></textarea>
+         </p>
+         <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+         </p>
+      </form>
+   </main>
+   <footer>
+      <p>Criado por <a href="https://github.com/Cauasl">Cauã S. Lopes</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,57 @@
+body {
+   background-image: linear-gradient(to right, #b3b3b3, #f8f0f0);
+   height: 100vh;
+}
+body > a {
+   font-weight: bold;
+   margin: 10px;
+   display: block;
+}
+
+html {
+	height: 100vh;
+}
+
+section#logar {
+	width: 350px;
+	margin: auto;
+	padding: 8px;
+   border: 1px solid black;
+   position: absolute;
+   bottom: 50%;
+   left: 50%;
+   transform: translateX(-50%) translateY(50%);
+   box-shadow: 0px 0px 8px #00000038;
+   background-color: #f8f0f0;
+}
+section#logar > h2 {
+	padding: 5px;
+}
+section#logar > form > p {
+	margin: 8px 0px;
+}
+section p#aviso {
+	font-size: .8em;
+	color: red;
+}
+section p.info {
+   font-size: .8em;
+   text-align: right;
+}
+section p.info > a:hover {
+   text-decoration: underline;
+}
+section#logar > form > p > input.infouser {
+	height: 25px;
+   width: 200px;
+}
+section#logar > form > p#mostrar {
+   font-size: .8em;
+}
+
+footer {
+   left: 50%;
+   bottom: 10px;
+   transform: translateX(-50%);
+   position: absolute;
+}

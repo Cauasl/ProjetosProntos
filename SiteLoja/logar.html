@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Logar/Cadastrar</title>
+   <link rel="stylesheet" href="estilos/telaindex/pg-inicial.css">
+   <link rel="stylesheet" href="estilos/all.css">
+	<link rel="stylesheet" href="estilos/formulario/formulario.css">
+</head>
+<body>
+   <header>
+      <h1><a href="index.html">AT Cel</a></h1>
+      <nav>
+        <a href="#">Concertar Aparelho</a>
+      </nav>
+   </header>
+   <a href="index.html">&lt; Voltar</a>
+   <section id="logar">
+      <h2>Login</h2>
+      <form action="" method="post" autocomplete="on">
+         <p><input class="infouser" type="text" name="dados" id="inome" placeholder="Nome" autocomplete="name" required minlength="4"></p>
+         
+         <p><input class="infouser" type="email" name="dados" id="iemail" placeholder="Email" required autocomplete="email"></p>
+
+         <p><input class="infouser" type="password" name="dados" id="isenha" placeholder="Senha" required autocomplete="current-password" minlength="4"></p>
+         <p id="aviso"></p>
+
+         <p id="mostrar">
+            <input type="checkbox" id="msenha" onclick="MostrarSenha()">
+            <label for="msenha"> Mostrar senha</label>
+         </p>
+         <p class="info">Não tem uma conta? <a href="fazerconta.html">Crie aqui!</a></p>
+         <p>
+         	<input type="button" onclick="Verificar()" value="Enviar">
+         	<input type="reset" value="Limpar">
+         </p>
+      </form>
+   </section>
+   <footer>
+      <p>Criado por <a href="https://github.com/Cauasl">Cauã S. Lopes</a></p>
+    </footer>
+</body>
+<script src="code/script.js"></script>
+</html>

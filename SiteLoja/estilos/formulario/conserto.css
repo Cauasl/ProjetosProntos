@@ -1,0 +1,15 @@
+body {
+   background-image: linear-gradient(to right, #d8d8d8, #f8f0f0);
+}
+
+main {
+   padding: 10px;
+}
+
+main > form > p {
+   margin: 16px 0px;
+}
+
+label {
+   font-weight: bold;
+}

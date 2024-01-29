@@ -1,0 +1,28 @@
+body {
+   font: normal 1em Arial, Helvetica, sans-serif;
+   background-color: var(--cor3);
+}
+
+header > h1 > a {
+   color: #c52222;
+}
+
+a {
+   text-decoration: none;
+}
+
+
+/* Rodapé */
+footer {
+   text-align: center;
+   font-size: .8em;
+   padding: 5px;
+}
+footer a {
+   color: var(--cor2);
+   transition: .8s;
+}
+footer a:hover {
+   color: var(--cor1);
+   transition: .8s;
+}
