@@ -41,4 +41,8 @@ async function PegarJSON(urljson) {
 PegarJSON('https://raw.githubusercontent.com/Cauasl/hggg/main/api-entreAspas/dadosprodutos.json').then((resdados) => {
 	console.log(resdados);
 	document.getElementById('nomedoprod').innerText = resdados.fonesdeouvido.nomeproduto;
+	let preco = String(resdados.fonesdeouvido.preco);
+	preco = preco.replace(/\./g, ',');
+	document.getElementById('preco').innerText = `R$ ${preco}`;
+	console.log(preco);
 })
