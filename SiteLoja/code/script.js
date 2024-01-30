@@ -1,4 +1,4 @@
-
+import { PegarJSON } from './functionRepetida.js';
 let aviso = document.getElementById('aviso');
 
 function Verificar() {
@@ -33,12 +33,7 @@ function MostrarSenha() {
 	}
 }
 
-async function PegarJSON(urljson) {
-	let dadosPRODS = await fetch(urljson);
-	return dadosPRODS.json();
-}
-
-PegarJSON('https://raw.githubusercontent.com/Cauasl/hggg/main/api-entreAspas/dadosprodutos.json').then((resdados) => {
+PegarJSON().then((resdados) => {
 	console.log(resdados);
 	document.getElementById('nomedoprod').innerText = resdados.fonesdeouvido.nomeproduto;
 	let preco = String(resdados.fonesdeouvido.preco);

@@ -13,40 +13,6 @@
     --sombra: #0000001c;
 }
 
-/* Cabeçalho */
-header {
-    background-color: var(--cor0);
-    color: white;
-    padding: 10px;
-    position: relative;
-}
-header > h1 {
-    color: var(--cor1);
-    display: inline-block;
-}
-header > nav {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-}
-header > nav > a {
-    margin-left: 10px;
-    font-weight: bold;
-    color: var(--cor2);
-}
-header > nav > a::after {
-    content: " >";
-    opacity: 0%;
-    transition: .3s;
-}
-header > nav > a:hover::after {
-    opacity: 100%;
-    margin-left: 5px;
-    transition: .3s;
-}
-
 /* Serviços */
 section#sec_Servicos {
     margin: 10px 0px;
