@@ -32,3 +32,13 @@ function MostrarSenha() {
 		consenha.type = mostar? 'text':'password';
 	}
 }
+
+async function PegarJSON(urljson) {
+	let dadosPRODS = await fetch(urljson);
+	return dadosPRODS.json();
+}
+
+PegarJSON('https://raw.githubusercontent.com/Cauasl/hggg/main/api-entreAspas/dadosprodutos.json').then((resdados) => {
+	console.log(resdados);
+	document.getElementById('nomedoprod').innerText = resdados.fonesdeouvido.nomeproduto;
+})
