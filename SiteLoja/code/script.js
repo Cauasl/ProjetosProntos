@@ -35,8 +35,9 @@ function MostrarSenha() {
 
 PegarJSON().then((resdados) => {
 	console.log(resdados);
-	document.getElementById('nomedoprod').innerText = resdados.fonesdeouvido.nomeproduto;
-	let preco = String(resdados.fonesdeouvido.preco);
+	document.getElementById('img-prod').src = resdados['001'].img;
+	document.getElementById('nomedoprod').innerText = resdados['001'].nomeproduto;
+	let preco = String(resdados['001'].preco);
 	preco = preco.replace(/\./g, ',');
 	document.getElementById('preco').innerText = `R$ ${preco}`;
 	console.log(preco);
