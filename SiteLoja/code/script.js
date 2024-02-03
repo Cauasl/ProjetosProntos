@@ -33,6 +33,16 @@ function MostrarSenha() {
 	}
 }
 
+function mostarmenu() {
+	lista = document.getElementById('lista');
+
+	if(lista.style.display == 'block') {
+		lista.style.display = 'none';
+	}else {
+		lista.style.display = 'block';
+	}
+}
+
 PegarJSON().then((resdados) => {
 	console.log(resdados);
 	document.getElementById('img-prod').src = resdados['001'].img;
@@ -40,5 +50,4 @@ PegarJSON().then((resdados) => {
 	let preco = String(resdados['001'].preco);
 	preco = preco.replace(/\./g, ',');
 	document.getElementById('preco').innerText = `R$ ${preco}`;
-	console.log(preco);
 })

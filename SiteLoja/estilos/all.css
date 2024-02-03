@@ -1,3 +1,5 @@
+
+/* Configurações globais */
 :root {
    --cor0: #00120B;
    --cor1: #c52222;
@@ -10,52 +12,53 @@
    padding: 0px;
    margin: 0px;
 }
-
 body {
    font: normal 1em Arial, Helvetica, sans-serif;
    background-color: var(--cor3);
 }
-
-
-header {
-   background-color: var(--cor0);
-   color: white;
-   padding: 10px;
-   position: relative;
-}
-header > h1 {
-   color: var(--cor1);
-   display: inline-block;
-}
-header > nav {
-   display: block;
-   position: absolute;
-   top: 50%;
-   right: 10px;
-   transform: translateY(-50%);
-}
-header > nav > a {
-   margin-left: 10px;
-   font-weight: bold;
-   color: var(--cor2);
-}
-header > nav > a::after {
-   content: " >";
-   opacity: 0%;
-   transition: .3s;
-}
-header > nav > a:hover::after {
-   opacity: 100%;
-   margin-left: 5px;
-   transition: .3s;
-}
-header > h1 > a {
-   color: #c52222;
-}
-
 a {
    text-decoration: none;
 }
+
+
+
+/* Cabeça */
+header {
+   background-color: var(--cor0);
+   color: white;
+   padding: 5px;
+   overflow: hidden;
+}
+header > section#cabeca {
+   display: flex;
+   flex-flow: row nowrap;
+   justify-content: space-between;
+   align-items: center;
+}
+header h1 {
+   font-size: 2.5em;
+}
+
+header ul {
+   list-style: none;
+   text-align: center;
+   display: none;
+}
+li > a {
+   color: var(--cor2);
+   font-weight: bold;
+   font-size: 1.1em;
+}
+li > a::before {
+   content: '> ';
+   color: var(--cor3);
+   opacity: 0%;
+}
+li > a:hover::before {
+   opacity: 100%;
+}
+
+
 
 
 /* Rodapé */
@@ -71,4 +74,21 @@ footer a {
 footer a:hover {
    color: var(--cor1);
    transition: .8s;
+}
+
+@media screen and (min-width: 768px) {
+   header {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+   }
+
+   header ul {
+      display: flex;
+      gap: 15px;
+   }
+
+   header > section#cabeca > i {
+      display: none;
+   }
 }
