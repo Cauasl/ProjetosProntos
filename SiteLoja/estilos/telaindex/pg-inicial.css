@@ -66,6 +66,19 @@ article > div.caixaslaterais {
     padding: 0px 8px;
     flex-flow: row nowrap;
     overflow-x: hidden;
+    position: relative;
+}
+div.caixaslaterais > span#direita {
+    position: absolute;
+    background-color: black;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50%;
+    z-index: 100;
+    transform: translate(0%, -50%);
+    top: 50%;
+    right: 3px;
+    cursor: pointer;
 }
 div.caixaslaterais > section.pbox {
     background-color: white;
