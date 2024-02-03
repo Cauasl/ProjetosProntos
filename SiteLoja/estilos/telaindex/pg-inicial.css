@@ -3,6 +3,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 :root {
     --cor0: #00120B;
@@ -61,14 +62,19 @@ article > h3 {
 article > div.caixaslaterais {
     margin-bottom: 20px;
     display: flex;
+    gap: 8px;
+    padding: 0px 8px;
+    flex-flow: row nowrap;
+    overflow-x: hidden;
 }
 div.caixaslaterais > section.pbox {
     background-color: white;
-    max-width: 165px;
+    flex-shrink: 0;
+    width: 165px;
     padding: 5px;
     border-radius: 8px;
-    margin: 0px 5px;
     box-shadow: 0px 0px 8px var(--sombra);
+    transform: translateX(0px);
 }
 div.caixaslaterais > section.pbox > img.img_prod {
     width: calc(100% + 10px);
