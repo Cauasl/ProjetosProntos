@@ -60,6 +60,7 @@ article > h3 {
 /* Caixas Produtos */
 article > div.caixaslaterais {
     margin-bottom: 20px;
+    display: flex;
 }
 div.caixaslaterais > section.pbox {
     background-color: white;
@@ -78,6 +79,9 @@ div.caixaslaterais > section.pbox > img.img_prod {
 div.caixaslaterais > section.pbox > p.classe {
     font-size: .6em;
     opacity: 50%;
+}
+div.caixaslaterais > section.pbox > a {
+    display: block;
 }
 div.caixaslaterais > section.pbox > p.preco {
     margin: 5px 0px;

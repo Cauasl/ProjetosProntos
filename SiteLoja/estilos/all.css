@@ -87,6 +87,9 @@ footer a:hover {
       display: flex;
       gap: 15px;
    }
+   header ul > li {
+      display: inline;
+   }
 
    header > section#cabeca > i {
       display: none;

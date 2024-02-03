@@ -13,7 +13,7 @@
   <header>
     <section id="cabeca">
       <h1>AT Cel</h1>
-      <i class="material-icons" onclick="mostarmenu()">menu</i>
+      <i class="material-icons" onclick="mostarMenu()">menu</i>
     </section>
     <ul id="lista">
       <li><a href="servico.html">Concertar Aparelho</a></li>
@@ -40,28 +40,7 @@
       <h2 id="produtos">Produtos</h2>
       <h3>Populares</h3>
       <div class="caixaslaterais">
-        <section class="pbox">
-          <p class="classe">Fones de Ouvido</p>
-          <img src="" id="img-prod" alt="Imagem do produto" class="img_prod">
-          <p><a href="viewprod.html?idp=001" id="nomedoprod"></a></p>
-          <p class="preco" id="preco"></p>
-        </section>
-      </div>
-      <div class="caixaslaterais">
-      	<section class="pbox">
-          <p class="classe">Fones de Ouvido</p>
-          <img src="" alt="Imagem do produto" class="img_prod">
-          <p><a href="viewprod.html?idp=002">Fone de ouvido atendente de marking</a></p>
-          <p class="preco">R$ 20<sup>,90</sup></p>
-        </section>
-      </div>
-      <div class="caixaslaterais">
-        <section class="pbox">
-          <p class="classe">Fones de Ouvido</p>
-          <img src="" alt="Imagem do produto" class="img_prod">
-          <p><a href="#">Fone de ouvido atendente de marking</a></p>
-          <p class="preco">R$ 20<sup>,90</sup></p>
-        </section>
+        
       </div>
     </article>
   </main>
@@ -69,5 +48,16 @@
     <p>Criado por <a href="https://github.com/Cauasl">Cauã S. Lopes</a></p>
   </footer>
 </body>
+<script>
+  function mostarMenu() {
+	let lista = document.getElementById('lista');
+
+	if(lista.style.display == 'block') {
+		lista.style.display = 'none';
+	}else {
+		lista.style.display = 'block';
+	}
+}
+</script>
 <script type="module" src="code/script.js"></script>
 </html>

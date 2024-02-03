@@ -1,4 +1,4 @@
-import { PegarJSON } from './functionRepetida.js';
+import { PegarJSON, CriadoCaixasProdutos } from './functionRepetida.js';
 let aviso = document.getElementById('aviso');
 
 function Verificar() {
@@ -33,21 +33,12 @@ function MostrarSenha() {
 	}
 }
 
-function mostarmenu() {
-	lista = document.getElementById('lista');
-
-	if(lista.style.display == 'block') {
-		lista.style.display = 'none';
-	}else {
-		lista.style.display = 'block';
-	}
-}
-
 PegarJSON().then((resdados) => {
 	console.log(resdados);
-	document.getElementById('img-prod').src = resdados['001'].img;
-	document.getElementById('nomedoprod').innerText = resdados['001'].nomeproduto;
-	let preco = String(resdados['001'].preco);
-	preco = preco.replace(/\./g, ',');
-	document.getElementById('preco').innerText = `R$ ${preco}`;
+
+	CriadoCaixasProdutos(1, resdados['001'].img, resdados['001'].classe, resdados['001'].nomeproduto, resdados['001'].preco, 'viewprod.html?idp=001');
+
+	CriadoCaixasProdutos(1, resdados['002'].img, resdados['002'].classe, resdados['002'].nomeproduto, resdados['002'].preco, 'viewprod.html?idp=002');
+
+	CriadoCaixasProdutos(1, resdados['003'].img, resdados['003'].classe, resdados['003'].nomeproduto, resdados['003'].preco, 'viewprod.html?idp=003');
 })
