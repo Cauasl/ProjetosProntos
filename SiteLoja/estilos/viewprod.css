@@ -2,9 +2,64 @@ body {
    height: 100vh;
 }
 
+section.caixa-produto {
+   box-shadow: 0px 0px 8px #00000045;
+   width: auto;
+   margin: 0px auto 15px auto;
+   border-radius: 15px;
+   padding: 8px;
+   text-align: justify;
+}
+section.caixa-produto:nth-of-type(1) {
+   border-top-left-radius: 0px;
+   border-top-right-radius: 0px;
+   box-shadow: 0px 8px 8px #00000045;
+   padding: 0px 0px 8px 0px;
+}
+
+#preco {
+   font-size: 1.5em;
+   font-weight: bold;
+}
+#preco::before {
+   content: 'R$ ';
+}
+
+.info {
+   margin: 10px 5px;
+}
+
+h2 {
+   padding: 10px 0px;
+}
+#botao-compra {
+   width: 100%;
+   height: 40px;
+   border: 1px solid green;
+   background-color: limegreen;
+   color: white;
+   border-radius: 10px;
+   font-size: 1.1em;
+   cursor: pointer;
+}
+
 div#img-prod {
    padding-bottom: 300px;
    background-size: contain;
    background-repeat: no-repeat;
    background-position: center center;
+   background-color: #00000010;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+   section.caixa-produto {
+      width: 768px;
+   }
+}
+
+@media screen and (min-width: 993px) {
+   section.caixa-produto {
+      width: 768px;
+      margin: 0px 0px 15px 0px;
+   }
 }
