@@ -70,8 +70,9 @@ article > div.caixaslaterais {
 }
 div.caixaslaterais > span#direita {
     position: absolute;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
+    font-weight: bold;
     padding: 15px 20px;
     border-radius: 50%;
     z-index: 100;
@@ -79,6 +80,7 @@ div.caixaslaterais > span#direita {
     top: 50%;
     right: 3px;
     cursor: pointer;
+    box-shadow: 0px 0px 8px var(--sombra);
 }
 div.caixaslaterais > section.pbox {
     background-color: white;
@@ -109,4 +111,9 @@ div.caixaslaterais > section.pbox > p.preco {
 }
 p.preco > sup {
     font-size: .5em;
+}
+
+
+div.caixaslaterais > section.pbox#mover {
+    transform: translateX(-163px);
 }
