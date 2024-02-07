@@ -25,6 +25,10 @@ section#sec_Servicos > div#CS {
     display: inline-block;
     padding: 8px;
     border-radius: 5px;
+    box-sizing: border-box;
+}
+section#sec_Servicos > div#CS:hover {
+	border: 2px solid var(--cor2);
 }
 section#sec_Servicos > div#CS > a {
     font-size: 1.2em;
@@ -32,16 +36,6 @@ section#sec_Servicos > div#CS > a {
 }
 section#sec_Servicos > div#CS:hover > a {
     color: var(--cor2);
-}
-section#sec_Servicos > div#CS > span {
-    font-weight: 700;
-    opacity: 0%;
-    transition: .8s;
-}
-section#sec_Servicos > div#CS:hover > span {
-    opacity: 100%;
-    margin-left: 5px;
-    transition: .8s;
 }
 
 
