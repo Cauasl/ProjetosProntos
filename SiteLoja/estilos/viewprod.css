@@ -2,10 +2,17 @@ body {
    height: 100vh;
 }
 
+
+main {
+   display: flex;
+   flex-flow: column nowrap;
+   align-items: flex-start;
+   gap: 15px;
+}
+
 section.caixa-produto {
    box-shadow: 0px 0px 8px #00000045;
-   width: auto;
-   margin: 0px auto 15px auto;
+   width: 100%;
    border-radius: 15px;
    padding: 8px;
    text-align: justify;
@@ -15,6 +22,7 @@ section.caixa-produto:nth-of-type(1) {
    border-top-right-radius: 0px;
    box-shadow: 0px 8px 8px #00000045;
    padding: 0px 0px 8px 0px;
+   text-align: left;
 }
 
 #preco {
@@ -42,6 +50,9 @@ h2 {
    font-size: 1.1em;
    cursor: pointer;
 }
+#botao-compra:active {
+   background-color: green;
+}
 
 div#img-prod {
    padding-bottom: 300px;
@@ -51,15 +62,43 @@ div#img-prod {
    background-color: #00000010;
 }
 
+#caixa-compra {
+   text-align: left;
+   align-self: flex-start;
+   flex-grow: 0;
+   width: 100%;
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
+   main {
+      align-items: center;
+   }
+
    section.caixa-produto {
       width: 768px;
+   }
+
+   #caixa-compra {
+      width: 768px;
+      align-self: center;
    }
 }
 
 @media screen and (min-width: 993px) {
+   main {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: flex-start;
+   }
+
    section.caixa-produto {
       width: 768px;
       margin: 0px 0px 15px 0px;
+   }
+
+   #caixa-compra {
+      align-self: flex-start;
+      flex-grow: 1;
+      width: 200px;
    }
 }
