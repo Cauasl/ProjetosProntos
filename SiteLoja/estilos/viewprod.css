@@ -4,15 +4,31 @@ body {
 
 
 main {
-   display: flex;
-   flex-flow: column nowrap;
-   align-items: flex-start;
-   gap: 15px;
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: auto;
+   grid-template-areas: 
+      "produto"
+      "info-produto"
+      "compra"
+   ;
+   gap: 10px;
+}
+
+#produto {
+   grid-area: produto;
+}
+#info-produto {
+   grid-area: info-produto;
+}
+#caixa-compra {
+   grid-area: compra;
+   text-align: left;
+   width: 100%;
 }
 
 section.caixa-produto {
    box-shadow: 0px 0px 8px #00000045;
-   width: 100%;
    border-radius: 15px;
    padding: 8px;
    text-align: justify;
@@ -62,43 +78,22 @@ div#img-prod {
    background-color: #00000010;
 }
 
-#caixa-compra {
-   text-align: left;
-   align-self: flex-start;
-   flex-grow: 0;
-   width: 100%;
-}
+/* @media screen and (min-width: 768px) and (max-width: 992px) {
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
-   main {
-      align-items: center;
-   }
 
-   section.caixa-produto {
-      width: 768px;
-   }
-
-   #caixa-compra {
-      width: 768px;
-      align-self: center;
-   }
-}
+} */
 
 @media screen and (min-width: 993px) {
    main {
-      display: flex;
-      flex-flow: row wrap;
-      align-items: flex-start;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 
+         "produto      compra"
+         "info-produto info-produto"
+      ;
    }
 
    section.caixa-produto {
-      width: 768px;
       margin: 0px 0px 15px 0px;
    }
 
-   #caixa-compra {
-      align-self: flex-start;
-      flex-grow: 1;
-      width: 200px;
-   }
 }
