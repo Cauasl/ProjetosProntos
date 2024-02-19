@@ -1,7 +1,7 @@
 import { PegarJSON, CriadoCaixasProdutos } from './functionRepetida.js';
 let aviso = document.getElementById('aviso');
 
-/*
+
 PegarJSON().then((resdados) => {
 	console.log(resdados);
 
@@ -12,4 +12,4 @@ PegarJSON().then((resdados) => {
 
 	CriadoCaixasProdutos(1, resdados['003'].img, resdados['003'].classe, resdados['003'].nomeproduto, resdados['003'].preco, 'viewprod.html?idp=003');
 });
-*/
+

@@ -59,22 +59,11 @@ article > div.caixaslaterais {
     gap: 8px;
     padding: 0px 8px;
     flex-flow: row nowrap;
-    overflow-x: hidden;
+    overflow-x: auto;
     position: relative;
 }
-div.caixaslaterais > span#direita {
-    position: absolute;
-    background-color: white;
-    color: black;
-    font-weight: bold;
-    padding: 15px 20px;
-    border-radius: 50%;
-    z-index: 100;
-    transform: translate(0%, -50%);
-    top: 50%;
-    right: 3px;
-    cursor: pointer;
-    box-shadow: 0px 0px 8px var(--sombra);
+div.caixaslaterais::-webkit-scrollbar {
+	width: 0px;
 }
 div.caixaslaterais > section.pbox {
     background-color: white;
