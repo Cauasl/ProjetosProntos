@@ -63,8 +63,10 @@ article > div.caixaslaterais {
     position: relative;
 }
 div.caixaslaterais::-webkit-scrollbar {
-	width: 0px;
+	width: 5px;
 }
+
+
 div.caixaslaterais > section.pbox {
     background-color: white;
     flex-shrink: 0;

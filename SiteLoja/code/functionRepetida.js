@@ -1,6 +1,12 @@
+
+
 export async function PegarJSON() {
-	let dadosPRODS = await fetch('https://raw.githubusercontent.com/Cauasl/hggg/main/api-entreAspas/dadosprodutos.json');
-	return dadosPRODS.json();
+	try {
+		let dadosPRODS = await fetch('https://raw.githubusercontent.com/Cauasl/hggg/main/api-entreAspas/dadosprodutos.json');
+		return dadosPRODS.json();
+	} catch(e) {
+		console.log(e);
+	}
 }
 
 export function CriadoCaixasProdutos(quant=1, imag, classe, nome, jpreco, vai) {

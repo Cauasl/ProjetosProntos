@@ -70,3 +70,11 @@ main {
    width: 100%;
    border-radius: 10px;
 }
+
+#galeria-de-artes {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: flex-start;
+	align-content: flex-start;
+}
