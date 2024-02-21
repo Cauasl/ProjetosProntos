@@ -38,3 +38,15 @@ export function CriarVizualizacao(url, ti, ondeId) {
    caixa.appendChild(titulo);
    titulo.innerText = ti;
 }
+
+
+export function CriarMandarPublicacao(arquivo, titulo, url) {
+   let obj = {
+      method: 'POST',
+      body: JSON.stringify({
+         title: titulo,
+         imag: arquivo
+      }),
+   }
+   fetch(url, obj);
+}

@@ -3,3 +3,19 @@
 body {
 	color: white;
 }
+
+#caixa-dados {
+   width: 400px;
+   margin: auto;
+   
+}
+
+
+#caixa-formulario {
+   background-color: grey;
+
+   display: flex;
+   flex-flow: column nowrap;
+   align-items: center;
+   padding: 10px;
+}
