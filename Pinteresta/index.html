@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Pinteresta</title>
+   <link rel="stylesheet" href="index.css">
+   <script type="module" src="script_index.js" defer></script>
+</head>
+<body>
+   <main>
+      <header id="topbar-user">
+         <!-- Imagem logo -->
+         <h1>LOGO</h1>
+         <input type="search" name="" id="" placeholder="Pesquisar">
+         <div id="menu-user">
+            <span id="open-menu" onclick="MostrarItensConta()">&lt;</span>
+            <i id="image-user">US</i>
+            <i><a href="#">MENSAGE</a></i>
+            <i><a href="#">UPDATE</a></i>
+         </div>
+      </header>
+      <article id="galeria-de-artes">
+         <img id="imagem-amostra" src="" alt="">
+      </article>
+      <footer>
+         <p>Criado por Cauã S. Lopes</p>
+      </footer>
+   </main>
+</body>
+<script>
+   function MostrarItensConta() {
+   let menu = document.getElementById('menu-user');
+   let open = document.getElementById('open-menu');
+
+   if(menu.classList == 'open-user') {
+      menu.classList = '';
+      open.innerText = '<';
+   } else {
+      menu.classList = 'open-user';
+      open.innerText = '>';
+   }
+}
+</script>
+</html>
