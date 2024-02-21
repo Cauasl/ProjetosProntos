@@ -7,7 +7,7 @@ export async function PegarImagens(url) {
    }
 }
 
-export function NumeroAleatorioNaoRepetido(min, max) {
+export function NumeroAleatorioNaoRepetido(min, max, comeca, termina) {
    let naoRepetir = [];
    let escoleNumero = arry => {
       let num = Math.floor(Math.random() * (max - min + 1)) + min;
@@ -17,7 +17,7 @@ export function NumeroAleatorioNaoRepetido(min, max) {
          escoleNumero(arry);
       }
    }
-   for(var i = 0; i < max; i++) {
+   for(var i = comeca; i < termina; i++) {
       escoleNumero(naoRepetir);
    }
    //console.log(naoRepetir);
