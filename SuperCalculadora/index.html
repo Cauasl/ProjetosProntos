@@ -8,7 +8,7 @@
    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
 </head>
 <body>
-   <menu id="menu" class="menuAberto">
+   <menu id="menu">
       <section class="Procura">
          <p><i onclick="mostrarMenu()" class="material-symbols-outlined">Sort</i></p>
          <input type="search" name="" id="pesquisa" placeholder="Pesquisar">
@@ -26,13 +26,14 @@
             Troca
          </div>
       </header>
-      <main class="calculadora">
+      <main id="caixa-calculadora" class="calculadora">
 
       </main>
       <footer>
          <p>Sei la</p>
       </footer>
    </main>
+   <script src="script_index.js"></script>
    <script>
       const menu = document.getElementById('menu');
 
