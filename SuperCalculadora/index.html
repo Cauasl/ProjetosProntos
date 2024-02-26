@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Super Calculadora</title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+</head>
+<body>
+   <menu id="menu" class="menuAberto">
+      <section class="Procura">
+         <p><i onclick="mostrarMenu()" class="material-symbols-outlined">Sort</i></p>
+         <input type="search" name="" id="pesquisa" placeholder="Pesquisar">
+      </section>
+      <hr>
+      <section class="conteiner-lista">
+
+      </section>
+   </menu>
+   <main class="conteiner">
+      <header>
+         <i onclick="mostrarMenu()" class="material-symbols-outlined">Sort</i>
+         <h1>Super <br> Calculadora</h1>
+         <div>
+            Troca
+         </div>
+      </header>
+      <main class="calculadora">
+
+      </main>
+      <footer>
+         <p>Sei la</p>
+      </footer>
+   </main>
+   <script>
+      const menu = document.getElementById('menu');
+
+      function mostrarMenu() {
+         if(menu.classList == 'menuAberto') {
+            menu.classList = '';
+         }else {
+            menu.classList = 'menuAberto';
+         }
+      }
+   </script>
+</body>
+</html>

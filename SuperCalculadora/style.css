@@ -1,0 +1,125 @@
+* {
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+}
+
+:root {
+   --cor1: #000814;
+   --cor2: #001d3d;
+   --cor3: #003566;
+   --cor4: #ffc300;
+   --cor5: #ffd60a;
+}
+
+hr {
+   margin: 15px 0px;
+   border-color: var(--cor2);
+}
+
+.material-symbols-outlined {
+   opacity: 100%;
+   color: var(--cor4);
+   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
+}
+/* Menu */
+menu {
+   background-color: var(--cor1);
+   height: 100vh;
+   overflow: hidden;
+   display: block;
+   position: absolute;
+   width: 0px;
+   padding: 0px;
+
+   transition: width .5s, padding .3s;
+}
+menu.menuAberto {
+   width: 80vw;
+   padding: 8px;
+
+   transition: width .5s;
+}
+
+section.Procura p {
+   text-align: right;
+}
+section.Procura > input#pesquisa {
+   width: 100%;
+   height: 30px;
+   border-radius: 5px;
+   border: 1px solid var(--cor5);
+   outline: none;
+   background-color: var(--cor1);
+   padding-left: 5px;
+   color: darkgray;
+}
+section.Procura > input#pesquisa:focus, section.Procura > input#pesquisa:hover {
+   background-color: var(--cor2);
+}
+
+
+/* Parte principal */
+main.conteiner {
+   background-color: skyblue;
+   height: 100vh;
+   display: flex;
+   flex-flow: column nowrap;
+   justify-content: space-between;
+}
+
+header {
+   background-color: var(--cor3);
+   width: 100%;
+   height: 80px;
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-between;
+   align-items: center;
+   text-align: center;
+}
+
+main.calculadora {
+   flex-grow: 1;
+   overflow-x: hidden;
+   overflow-y: auto;
+   background-color: var(--cor2);
+}
+
+
+
+
+footer {
+   text-align: center;
+   background-color: var(--cor3);
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+   menu.menuAberto {
+      width: 300px;
+      padding: 8px;
+   
+      transition: width .5s;
+   }
+}
+
+@media screen and (min-width: 993px) {
+   body {
+      display: grid;
+      grid-template-columns: 300px calc(100vw - 300px);
+   }
+   .material-symbols-outlined {
+      opacity: 0%;
+      color: var(--cor4);
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
+   }
+   menu {
+      position: static;
+      width: 300px;
+      padding: 8px;
+
+   }
+}
