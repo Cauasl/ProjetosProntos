@@ -13,16 +13,3 @@ import { CriarCaixa, SelecaoContas } from './modulo.js';
 		})(i);
 	}
 })();
-
-class OperacoesMatematicas {
-	#caixadvalores = null;
-	#controle = true;
-
-	Soma(n1, n2) {
-		if(this.#caixadvalores != null && this.#controle == true) {
-			this.#caixadvalores = n1 + n2;
-		}else {
-			return n1 + n2;
-		}
-	}
-}

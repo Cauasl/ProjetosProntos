@@ -33,6 +33,7 @@ menu {
    position: absolute;
    width: 0px;
    padding: 0px;
+   z-index: 5;
 
    transition: width .5s, padding .3s;
 }
