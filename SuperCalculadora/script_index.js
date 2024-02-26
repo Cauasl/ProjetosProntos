@@ -1,24 +1,28 @@
+import { CriarCaixa, SelecaoContas } from './modulo.js';
 
+(function() {
+	const lista = document.getElementById('lista');
 
-function CriarCaixa(idC) {
-	console.log(`O id da caixa é: ${idC}`);
-	const calculadora = document.getElementById('caixa-calculadora');
-	
-	const caixa = document.createElement("div");
-	caixa.setAttribute("id", idC);
-	caixa.setAttribute("class", "caixa-calculo")
-	
-	const apagar = document.createElement("span");
-	
-	calculadora.appendChild(caixa);
-	caixa.appendChild(apagar);
-	apagar.innerText = "X";
-	apagar.addEventListener("click", function() {
-		document.getElementById(idC).remove();
-	});
+	let cel = lista.getElementsByTagName('li');
+	for(var i = 0; i < cel.length; i++) {
+		(function(tel) {
+			cel[tel].addEventListener('click', function() {
+				let nomeCalculo = cel[tel].innerText;
+				SelecaoContas(nomeCalculo);
+			});
+		})(i);
+	}
+})();
+
+class OperacoesMatematicas {
+	#caixadvalores = null;
+	#controle = true;
+
+	Soma(n1, n2) {
+		if(this.#caixadvalores != null && this.#controle == true) {
+			this.#caixadvalores = n1 + n2;
+		}else {
+			return n1 + n2;
+		}
+	}
 }
-
-CriarCaixa("oneCase");
-CriarCaixa("hshs");
-CriarCaixa("jwnen");
-CriarCaixa("ujzhz");

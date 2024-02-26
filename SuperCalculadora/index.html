@@ -5,6 +5,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Super Calculadora</title>
    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="estiloDasCaixas.css">
    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
 </head>
 <body>
@@ -15,7 +16,11 @@
       </section>
       <hr>
       <section class="conteiner-lista">
-
+         <ul id="lista">
+            <li>Soma</li>
+            <li>Subtração</li>
+            <li>Multiplicação</li>
+         </ul>
       </section>
    </menu>
    <main class="conteiner">
@@ -33,11 +38,10 @@
          <p>Sei la</p>
       </footer>
    </main>
-   <script src="script_index.js"></script>
+   <script src="script_index.js" type="module"></script>
    <script>
-      const menu = document.getElementById('menu');
-
       function mostrarMenu() {
+         const menu = document.getElementById('menu');
          if(menu.classList == 'menuAberto') {
             menu.classList = '';
          }else {
