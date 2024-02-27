@@ -7,13 +7,15 @@ class OperacoesMatematicas {
 		if(this.#caixadvalores != null && this.#controle == true) {
 			this.#caixadvalores = n1 + n2;
 		}else {
-			console.log(Number(n1) + Number(n2));
-			//return n1 + n2;
+			return Number(n1) + Number(n2);
 		}
 	}
 }
 
-export function CriarCaixa(idC, titulo, idB) {
+//function 
+
+export function CriarCaixa(idC, titulo) {
+	
 	console.log(`O id da caixa é: ${idC}`);
 	const calculadora = document.getElementById('caixa-calculadora');
 	
@@ -29,10 +31,7 @@ export function CriarCaixa(idC, titulo, idB) {
 	const CaixaTitulo = document.createElement('div');
 	const Titulo = document.createElement('h2');
 	CaixaTitulo.setAttribute('class', 'lugar-do-titulo-da-caixa');
-
-	const resposta = document.createElement('button');
-	resposta.setAttribute('id', idB);
-	resposta.setAttribute('class', 'resposta');
+	
 
 	//Aplicando a caixa.
 	calculadora.appendChild(caixa); //Aplicando a caixa do conteiner principal.
@@ -46,9 +45,6 @@ export function CriarCaixa(idC, titulo, idB) {
 	apagar.addEventListener("click", function() { //Função de apagar a caixa.
 		document.getElementById(idC).remove();
 	});
-
-	caixa.appendChild(resposta);
-	resposta.innerText = 'RESOLVER';
 }
 
 
@@ -57,28 +53,15 @@ export function SelecaoContas(QualConta) {
 	const calcular = new OperacoesMatematicas();
 	switch(QualConta) {
 		case 'Soma':
-			CriarCaixa('soma' , QualConta, 'somaB');
-         const caixa = document.getElementById('soma');
-
-         const n1_input = document.createElement('input');
-			n1_input.setAttribute('type', 'number');
-			const n2_input = document.createElement('input');
-			n2_input.setAttribute('type', 'number');
-
-			caixa.appendChild(n1_input);
-			caixa.appendChild(n2_input);
-
-			document.getElementById('somaB').addEventListener('click', function() {
-				calcular.Soma(n1_input.value, n2_input.value);
-			});
+			CriarCaixa('soma' , QualConta);
 		break;
 
 		case 'Subtração':
-			CriarCaixa('subtracao' , QualConta, 'subtracaoB');
+			CriarCaixa('subtracao' , QualConta);
 		break;
 
 		case 'Multiplicação':
-			CriarCaixa('multiplicacao' , QualConta, 'multiplicacaoB');
+			CriarCaixa('multiplicacao' , QualConta);
 		break;
 	}
 }

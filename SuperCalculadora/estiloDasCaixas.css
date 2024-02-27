@@ -18,10 +18,3 @@ div.lugar-do-titulo-da-caixa {
 div.lugar-do-titulo-da-caixa > h2 {
    color: var(--cor4);
 }
-
-.resposta {
-	position: relative;
-	
-	top: 230px;
-	left: 83%;
-}
