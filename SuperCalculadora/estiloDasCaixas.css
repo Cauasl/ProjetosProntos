@@ -7,14 +7,39 @@ div.caixa-calculo {
 	border-radius: 10px;
 	border: 3px solid var(--cor3);
 	color: darkgray;
+	padding: 3px 10px;
 }
 
 div.lugar-do-titulo-da-caixa {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   padding: 3px 10px;
 }
 div.lugar-do-titulo-da-caixa > h2 {
    color: var(--cor4);
+}
+
+
+.conteiner-inputs {
+	text-align: center;
+	border: 2px solid #003566;
+	border-radius: 5px;
+	padding-top: 10px;
+}
+
+.conteiner-inputs > input {
+	border-radius: 3px;
+	outline: none;
+	border: none;
+	height: 25px;
+	background-color: #003566;
+	color: white;
+	padding: 0px 10px;
+}
+
+.conteiner-resposta {
+	text-align: left;
+	padding: 5px 10px;
+	font-weight: bold;
+	font-size: 1.5em;
 }

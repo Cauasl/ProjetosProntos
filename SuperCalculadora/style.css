@@ -53,6 +53,7 @@ ul#lista > li {
    padding: 10px;
    margin-bottom: 5px;
    color: darkgray;
+   cursor: pointer;
 }
 ul#lista > li:hover {
    color: var(--cor4);

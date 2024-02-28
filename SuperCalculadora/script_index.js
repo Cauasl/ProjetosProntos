@@ -1,4 +1,4 @@
-import { CriarCaixa, SelecaoContas } from './modulo.js';
+import { SelecaoContas } from './modulo.js';
 
 (function() {
 	const lista = document.getElementById('lista');
