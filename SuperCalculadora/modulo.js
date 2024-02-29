@@ -1,4 +1,5 @@
 
+
 class OperacoesMatematicas {
 	#caixadvalores = null;
 	#controle = true;
@@ -8,6 +9,22 @@ class OperacoesMatematicas {
 			this.#caixadvalores = n1 + n2;
 		}else {
 			return Number(n1) + Number(n2);
+		}
+	}
+	
+	Subtracao(n1, n2) {
+		if(this.#caixadvalores != null && this.#controle == true) {
+			this.#caixadvalores = n1 - n2;
+		}else {
+			return Number(n1) + Number(n2);
+		}
+	}
+	
+	Multiplicacao(n1, n2) {
+		if(this.#caixadvalores != null && this.#controle == true) {
+			this.#caixadvalores = n1 + n2;
+		}else {
+			return Number(n1) * Number(n2);
 		}
 	}
 }
@@ -34,7 +51,8 @@ function CriarCaixa(idC, titulo) {
 	caixa.setAttribute("class", "caixa-calculo");
 
 	const apagar = document.createElement("span"); //Botão de deletar a caixa.
-	apagar.setAttribute('style', 'color: red; font-weight: bold; cursor: pointer;');
+	apagar.setAttribute('style', 'color: red; cursor: pointer;');
+	apagar.setAttribute('class', 'material-symbols-outlined');
 
 	//Conteiner do titulo e botão de apagar.
 	const CaixaTitulo = document.createElement('div');
@@ -60,7 +78,7 @@ function CriarCaixa(idC, titulo) {
 	CaixaTitulo.appendChild(Titulo);
 	CaixaTitulo.appendChild(apagar);
 	Titulo.innerText = titulo;
-	apagar.innerText = "X";
+	apagar.innerText = "Delete";
 	apagar.addEventListener("click", function() { //Função de apagar a caixa.
 		document.getElementById(idC).remove();
 	});
@@ -112,13 +130,31 @@ export function SelecaoContas(QualConta) {
 			caixa.appendChild(input2);
 
 			BotaoResolverCalculo('subtracao', function() {
-				let calculo = Number(input1.value) - Number(input2.value);
+				let calculo = calcular.Subtracao(input1.value, input2.value);
 				document.getElementById('subtracaoRES').innerHTML = calculo;
 			});
 		break;
 
 		case 'Multiplicação':
 			CriarCaixa('multiplicacao' , QualConta);
+			
+			input1 = document.createElement('input');
+			input1.setAttribute('type', 'number');
+			input2 = document.createElement('input');
+			input2.setAttribute('type', 'number');
+
+			caixa = document.getElementById('multiplicacaoCINPUT');
+			caixa.appendChild(input1);
+			caixa.appendChild(input2);
+
+			BotaoResolverCalculo('multiplicacao', function() {
+				let calculo = calcular.Multiplicacao(input1.value, input2.value);
+				document.getElementById('multiplicacaoRES').innerHTML = calculo;
+			});
+		break;
+		
+		default:
+			alert('Não encontrado a operação ' + QualConta);
 		break;
 	}
 }
