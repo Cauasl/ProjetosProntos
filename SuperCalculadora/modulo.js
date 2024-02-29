@@ -1,46 +1,6 @@
 
 
-class OperacoesMatematicas {
-	#caixadvalores = null;
-	#controle = true;
-
-	Soma(n1, n2) {
-		if(this.#caixadvalores != null && this.#controle == true) {
-			this.#caixadvalores = n1 + n2;
-		}else {
-			return Number(n1) + Number(n2);
-		}
-	}
-	
-	Subtracao(n1, n2) {
-		if(this.#caixadvalores != null && this.#controle == true) {
-			this.#caixadvalores = n1 - n2;
-		}else {
-			return Number(n1) + Number(n2);
-		}
-	}
-	
-	Multiplicacao(n1, n2) {
-		if(this.#caixadvalores != null && this.#controle == true) {
-			this.#caixadvalores = n1 + n2;
-		}else {
-			return Number(n1) * Number(n2);
-		}
-	}
-}
-
-function BotaoResolverCalculo(idC, funcao) {
-	const caixa = document.getElementById(idC);
-
-	const botaoResolver = document.createElement('button');
-	
-
-	caixa.appendChild(botaoResolver);
-	botaoResolver.innerText = 'Resolver';
-	botaoResolver.addEventListener('click', funcao);
-}
-
-function CriarCaixa(idC, titulo) {
+function CriarCaixaBase(idC, titulo) {
 	
 	console.log(`O id da caixa é: ${idC}`);
 	const calculadora = document.getElementById('caixa-calculadora');
@@ -90,71 +50,32 @@ function CriarCaixa(idC, titulo) {
 }
 
 
-export function SelecaoContas(QualConta) {
+export function CriarCaixa(idCaixa, NomeOperacao, funcao) {
+	CriarCaixaBase(idCaixa , NomeOperacao);
 
-	const calcular = new OperacoesMatematicas();
+	const CINPUT = idCaixa + 'CINPUT';
+	const caixa = document.getElementById(idCaixa);
 
-	let input1;
-	let input2;
-	let caixa;
+	const input1 = document.createElement('input');
+	input1.setAttribute('type', 'number');
+	input1.setAttribute('name', idCaixa);
 
-	switch(QualConta) {
-		case 'Soma':
-			CriarCaixa('soma' , QualConta);
+	const input2 = document.createElement('input');
+	input2.setAttribute('type', 'number');
+	input2.setAttribute('name', idCaixa);
 
-			input1 = document.createElement('input');
-			input1.setAttribute('type', 'number');
-			input2 = document.createElement('input');
-			input2.setAttribute('type', 'number');
+	const conteinerInputs = document.getElementById(CINPUT);
+	conteinerInputs.appendChild(input1);
+	conteinerInputs.appendChild(input2);
 
-			caixa = document.getElementById('somaCINPUT');
-			caixa.appendChild(input1);
-			caixa.appendChild(input2);
+	const botaoResolver = document.createElement('button');
+	caixa.appendChild(botaoResolver);
+	botaoResolver.innerText = 'Resolver';
+	botaoResolver.addEventListener('click', funcao);
+}
 
-			BotaoResolverCalculo('soma', function() {
-				let calculo = calcular.Soma(input1.value, input2.value);
-				document.getElementById('somaRES').innerHTML = calculo;
-			});
-		break;
-
-		case 'Subtração':
-			CriarCaixa('subtracao' , QualConta);
-
-			input1 = document.createElement('input');
-			input1.setAttribute('type', 'number');
-			input2 = document.createElement('input');
-			input2.setAttribute('type', 'number');
-
-			caixa = document.getElementById('subtracaoCINPUT');
-			caixa.appendChild(input1);
-			caixa.appendChild(input2);
-
-			BotaoResolverCalculo('subtracao', function() {
-				let calculo = calcular.Subtracao(input1.value, input2.value);
-				document.getElementById('subtracaoRES').innerHTML = calculo;
-			});
-		break;
-
-		case 'Multiplicação':
-			CriarCaixa('multiplicacao' , QualConta);
-			
-			input1 = document.createElement('input');
-			input1.setAttribute('type', 'number');
-			input2 = document.createElement('input');
-			input2.setAttribute('type', 'number');
-
-			caixa = document.getElementById('multiplicacaoCINPUT');
-			caixa.appendChild(input1);
-			caixa.appendChild(input2);
-
-			BotaoResolverCalculo('multiplicacao', function() {
-				let calculo = calcular.Multiplicacao(input1.value, input2.value);
-				document.getElementById('multiplicacaoRES').innerHTML = calculo;
-			});
-		break;
-		
-		default:
-			alert('Não encontrado a operação ' + QualConta);
-		break;
-	}
+export function idAleatorio() {
+	const dataDeHoje = new Date();
+	const mes = String(dataDeHoje.getMonth() + 1);
+	return String(dataDeHoje.getFullYear()) + mes + String(dataDeHoje.getDate()) + String(dataDeHoje.getHours()) + String(dataDeHoje.getMinutes()) + String(dataDeHoje.getSeconds()) + String(dataDeHoje.getMilliseconds());
 }
