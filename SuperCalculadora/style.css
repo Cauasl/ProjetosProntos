@@ -114,6 +114,7 @@ main.calculadora {
 
    display: grid;
    grid-template-columns: 100%;
+   grid-auto-rows: 300px;
    gap: 10px;
 }
 
