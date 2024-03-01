@@ -17,7 +17,7 @@ import { CriarCaixa, idAleatorio } from './modulo.js';
 	//Registrando Service Worker
 	if('serviceWorker' in navigator) {
 		//The Service Worker it works!
-		console.log('O Service Worker funciona!');
+		//console.log('O Service Worker funciona!');
 		navigator.serviceWorker.register('./myService-worker.js').then(function(resposta) {
 			console.log('O Service Worker foi registrado: ' + resposta);
 		}).catch(function(err) {
