@@ -1,8 +1,9 @@
 import { CriarCaixa, idAleatorio } from './modulo.js';
 
 (function() {
-	const lista = document.getElementById('lista');
 
+	//Adiciona na lista, ao clicar uma funcão é chamada para criar a operação
+	const lista = document.getElementById('lista');
 	let cel = lista.getElementsByTagName('li');
 	for(var i = 0; i < cel.length; i++) {
 		(function(tel) {
@@ -11,6 +12,20 @@ import { CriarCaixa, idAleatorio } from './modulo.js';
 				SelecaoContas(nomeCalculo);
 			});
 		})(i);
+	}
+
+	//Registrando Service Worker
+	if('serviceWorker' in navigator) {
+		//The Service Worker it works!
+		console.log('O Service Worker funciona!');
+		navigator.serviceWorker.register('./myService-worker.js').then(function(resposta) {
+			console.log('O Service Worker foi registrado: ' + resposta);
+		}).catch(function(err) {
+			console.error('Não foi possivel registrar o Service Worker: ' + err);
+		});
+	}else {
+		//The Service Worker not it works!
+		console.error('O Service Worker não funciona!');
 	}
 })();
 
