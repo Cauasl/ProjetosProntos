@@ -11,7 +11,7 @@ self.addEventListener('install', function(eventoInstall) {
    }));
 });
 
-self.addEventListener('active', function(evento) {
+self.addEventListener('activate', function(evento) {
    console.log('Service Worker ativado!');
    evento.waitUntil(caches.keys().then(function(NomeDosCaches) {
       NomeDosCaches.filter(function(NomeDesseCache) {
