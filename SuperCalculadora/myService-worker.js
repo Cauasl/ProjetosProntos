@@ -1,15 +1,21 @@
-const CACHE_NAME = 'MeuCache';
+const CACHE_NAME = 'MeuCacheV2';
 const arquivosParaArmazenar = ['./index.html', './style.css', './estiloDasCaixas.css', './script_index.js', './modulo.js'];
 
 self.addEventListener('install', function(eventoInstall) {
    console.log('Service Worker foi instalado!');
    eventoInstall.waitUntil(caches.open(CACHE_NAME).then(function(dadosCache) {
-      console.log('Cache aberto! Nome: ' + CACHE_NAME);
       return dadosCache.addAll(arquivosParaArmazenar);
 
    }).catch(function(err) {
       console.error(err);
    }));
+});
+
+self.addEventListener('activate', function(evento) {
+   console.log('Service Worker ativado!');
+   evento.waitUntil(caches.keys().then(function(NomeDosCaches) {
+      console.log(NomeDosCaches);
+   }))
 });
 
 self.addEventListener('fetch', function(evento) {
