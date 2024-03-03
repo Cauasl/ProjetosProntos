@@ -14,11 +14,11 @@ self.addEventListener('install', function(eventoInstall) {
 self.addEventListener('activate', function(evento) {
    console.log('Service Worker ativado!');
    evento.waitUntil(caches.keys().then(function(NomeDosCaches) {
-      NomeDosCaches.filter(function(NomeDesseCache) {
+      return Promise.all(NomeDosCaches.filter(function(NomeDesseCache) {
          return NomeDesseCache !== CACHE_NAME;
       }).map(function(ApagarEsseCache) {
          return caches.delete(ApagarEsseCache);
-      });
+      }));
    }))
 });
 
